@@ -1,0 +1,195 @@
+/* =============================
+Reset & Global
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* =============================
+Navbar (Same as Home Page)
+============================= */
+header {
+  background: #000;
+  padding: 15px 8%;
+  border-bottom: 2px solid #ff004f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #ff004f;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff004f;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 0;
+  transition: 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ff004f;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff004f;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* =============================
+Heading
+============================= */
+main h2 {
+  text-align: center;
+  color: #ff004f;
+  margin: 40px 0 25px;
+  font-size: 2rem;
+}
+
+/* =============================
+Form Styling
+============================= */
+form {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  border: 1px solid #ff004f;
+  box-shadow: 0 4px 15px rgba(255,0,79,0.3);
+}
+
+fieldset {
+  border: 1px solid #ff004f;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  color: #ff004f;
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  color: #eee;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ff004f;
+  background: #000;
+  color: #eee;
+  width: calc(100% - 150px);
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background: #ff004f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+                                
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: #fff;
+  color: #ff004f;
+  border: 1px solid #ff004f;
+}
+
+/* =============================
+Footer (Same as Home Page)
+============================= */
+footer {
+  background: #000;
+  color: #bbb;
+  padding: 20px 8%;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #ff004f, #ff3377) 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+  color: #ff004f;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer nav ul {
+    justify-content: center;
+  }
+}
